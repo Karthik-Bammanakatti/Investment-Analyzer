@@ -1,4 +1,4 @@
-<div class="container-fluid my-2">
+<div class="container-fluid my-2 mx-2">
     <form (ngSubmit)="onSubmit()">
         <div class="border border-3 rounded-3 border-primary col-10">
             <div class="row my-3 mx-2">
@@ -41,11 +41,20 @@
                     </div>
                 </div>
             </div>
+            @if(enteredInitialAmount && enteredNumberOfYears && enteredYearlyAmount &&
+            enteredYearlyInterestRate) {
             <div class="row my-3 mx-2 mb-0">
                 <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Calculate</button>
+                    <button type="submit" class="btn btn-primary mb-3">Analyze</button>
                 </div>
             </div>
+            } @else {
+            <div class="row my-3 mx-2 mb-0">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3" disabled>Analyze</button>
+                </div>
+            </div>
+            }
         </div>
     </form>
 </div>
