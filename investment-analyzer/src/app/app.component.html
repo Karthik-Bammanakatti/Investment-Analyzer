@@ -1,0 +1,5 @@
+<app-header />
+<app-input-form (formSubmit)="onFormSubmit($event)" />
+@if (summaryData.length != 0) {
+<app-summary [summaryData]="summaryData" />
+}

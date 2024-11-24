@@ -1,0 +1,51 @@
+<div class="container-fluid my-2">
+    <form (ngSubmit)="onSubmit()">
+        <div class="border border-3 rounded-3 border-primary col-10">
+            <div class="row my-3 mx-2">
+                <div class="col-4">
+                    <label for="Initial Amount" class="form-label">Initial Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-text border border-2 border-dark border-end-0">$</span>
+                        <input type="number" class="form-control border border-2 border-dark" id="Initial Amount"
+                            name="Initial Amount" placeholder="Initial Amount" aria-label="Initial Amount" min="0"
+                            step="1000" [(ngModel)]="enteredInitialAmount">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="Yearly Amount" class="form-label">Yearly Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-text border border-2 border-dark border-end-0">$</span>
+                        <input type="number" class="form-control border border-2 border-dark" id="Yearly Amount"
+                            name="Yearly Amount" placeholder="Yearly Amount" aria-label="Yearly Amount" min="0"
+                            step="100" [(ngModel)]="enteredYearlyAmount">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3 mx-2">
+                <div class="col-4">
+                    <label for="Yearly Interest %" class="form-label">Yearly Interest %</label>
+                    <div class="input-group">
+                        <span class="input-group-text border border-2 border-dark border-end-0">%</span>
+                        <input type="number" class="form-control border border-2 border-dark" id="Yearly Interest %"
+                            name="Yearly Interest %" placeholder="Yearly Interest %" aria-label="Yearly Interest %"
+                            min="0" step="5" [(ngModel)]="enteredYearlyInterestRate">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="Time (# of years)" class="form-label">Time (# of years)</label>
+                    <div class="input-group">
+                        <span class="input-group-text border border-2 border-dark border-end-0">#</span>
+                        <input type="number" class="form-control border border-2 border-dark" id="Time"
+                            name="Time (# of years)" aria-label="Time" placeholder="Time (# of years)" step="1" min="0"
+                            [(ngModel)]="enteredNumberOfYears">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3 mx-2 mb-0">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
